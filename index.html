@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 헤더 섹션 -->
+    <header class="header">
+        <div class="logo-nav">
+            <!-- 로고 이미지 -->
+            <img src="logo.png" alt="Logo">
+            <!-- 네비게이션 메뉴 -->
+            <nav>
+                <ul>
+                    <li><a href="#">우리의 미션</a></li>
+                    <li><a href="#">정기배송</a></li>
+                    <li><a href="#">싱싱마켓</a></li>
+                    <li><a href="#">커뮤니티</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- 로그인 버튼 -->
+        <button class="login-btn">로그인</button>
+    </header>
+
+    <!-- 메인 컨테이너 -->
+    <div class="container">
+        <!-- 제품 섹션 -->
+        <div class="product">
+            <!-- 제품 이미지 -->
+            <img src="main.webp" alt="Product Image" class="product-image">
+            <!-- 제품 상세 정보 -->
+            <div class="product-details">
+                <!-- 평점 -->
+                <div class="rating">
+                    ★★★★★
+                    <a href="#">27건의 후기 모두 보기 ></a>
+                </div>
+                <!-- 제품 이름 -->
+                <h1>국산 서리태 두유 20포</h1>
+                <!-- 가격 정보 -->
+                <div class="price">
+                    <span class="discount">13%</span>
+                    <span class="original-price">29,900원</span>
+                    <span class="final-price">26,000원</span>
+                </div>
+                <!-- 제품 정보 -->
+                <div class="product-info">
+                    <!-- 구분선 -->
+                    <hr class="separator">
+                    <!-- 정보 행: 생산지 -->
+                    <div class="info-row">
+                        <div class="label">생산지</div>
+                        <div class="value spaced">아산</div>
+                    </div>
+                    <!-- 정보 행: 배송비 -->
+                    <div class="info-row">
+                        <div class="label">배송비</div>
+                        <div class="value">무료배송</div>
+                    </div>
+                    <!-- 추가 정보: 도서·산간 지역 추가 요금 -->
+                    <div class="sub-info">도서·산간 지역 추가 4,000원 부과</div>
+                    <!-- 정보 행: 배송 출발일 -->
+                    <div class="info-row">
+                        <div class="label">배송 출발일</div>
+                        <div class="value">오늘 오전 9시 전까지 주문 시</div>
+                    </div>
+                    <!-- 배송 날짜 정보 -->
+                    <div class="shipping-date">2024년 5월 27일 (월) 출발</div>
+                    <!-- 구분선 -->
+                    <hr class="separator">
+                </div>
+                <!-- 총 상품 금액 섹션 -->
+                <div class="total-price">
+                    <div class="total-label">총 상품 금액</div>
+                    <!-- 수량 조절 -->
+                    <div class="quantity-controls">
+                        <button class="quantity-btn gray-btn">-</button>
+                        <input type="text" value="1" readonly class="quantity-input">
+                        <button class="quantity-btn gray-btn">+</button>
+                    </div>
+                    <!-- 총 금액 -->
+                    <div class="total-amount">26,000원</div>
+                </div>
+                <!-- 액션 버튼 -->
+                <div class="actions">
+                    <button class="cart-btn">장바구니</button>
+                    <button class="gift-btn">선물하기</button>
+                    <button class="buy-btn">구매하기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 상단 GNB 폭 값 수정 필요!! -->
