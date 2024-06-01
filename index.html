@@ -6,13 +6,15 @@
     <title>Product Page</title>
     <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="style.css">
+    <!-- JavaScript 파일 연결 -->
+    <script defer src="script.js"></script>
 </head>
 <body>
     <!-- 헤더 섹션 -->
     <header class="header">
         <div class="logo-nav">
             <!-- 로고 이미지 -->
-            <img src="logo.png" alt="Logo">
+            <img src="logo.png" alt="Logo"> <!-- 로고 이미지 경로 확인 -->
             <!-- 네비게이션 메뉴 -->
             <nav>
                 <ul>
@@ -26,65 +28,81 @@
         <!-- 로그인 버튼 -->
         <button class="login-btn">로그인</button>
     </header>
-
+    
     <!-- 메인 컨테이너 -->
     <div class="container">
         <!-- 제품 섹션 -->
         <div class="product">
-            <!-- 제품 이미지 -->
-            <img src="main.webp" alt="Product Image" class="product-image">
+            <!-- 제품 이미지 슬라이더 -->
+            <div class="product-image-slider">
+                <img src="hanla1.webp" alt="Product Image 1" class="product-image main-image"> <!-- 메인 이미지 경로 확인 -->
+                <div class="thumbnail-container">
+                    <img src="hanla1.webp" alt="Thumbnail Image 1" class="thumbnail active" onclick="changeImage('hanla1.webp')"> <!-- 썸네일 이미지 경로 확인 -->
+                    <img src="hanla2.jpg" alt="Thumbnail Image 2" class="thumbnail" onclick="changeImage('hanla2.jpg')">
+                    <img src="hanla3.webp" alt="Thumbnail Image 3" class="thumbnail" onclick="changeImage('hanla3.webp')">
+                </div>
+            </div>
             <!-- 제품 상세 정보 -->
             <div class="product-details">
                 <!-- 평점 -->
                 <div class="rating">
                     ★★★★★
-                    <a href="#">27건의 후기 모두 보기 ></a>
+                    <a href="#">248건의 후기 모두 보기 ></a>
                 </div>
                 <!-- 제품 이름 -->
-                <h1>국산 서리태 두유 20포</h1>
+                <h1>무농약 한라봉&감귤 주스 40포</h1>
                 <!-- 가격 정보 -->
                 <div class="price">
-                    <span class="discount">13%</span>
-                    <span class="original-price">29,900원</span>
-                    <span class="final-price">26,000원</span>
+                    <span class="discount">21%</span>
+                    <span class="original-price">43,300원</span>
+                    <span class="final-price">34,000원</span>
                 </div>
                 <!-- 제품 정보 -->
                 <div class="product-info">
                     <!-- 구분선 -->
                     <hr class="separator">
+                    <!-- 무농약 배지 -->
+                    <div class="badge">무농약</div>
+                    <!-- 정보 행: 재배 환경 -->
+                    <div class="info-row">
+                        <div class="label">재배 환경</div>
+                        <div class="value spaced">화학농약X, 살충제X, 제초제X</div>
+                    </div>
                     <!-- 정보 행: 생산지 -->
                     <div class="info-row">
                         <div class="label">생산지</div>
-                        <div class="value spaced">아산</div>
+                        <div class="value spaced">제주</div>
                     </div>
                     <!-- 정보 행: 배송비 -->
                     <div class="info-row">
                         <div class="label">배송비</div>
-                        <div class="value">무료배송</div>
+                        <div class="value spaced">무료배송</div>
                     </div>
-                    <!-- 추가 정보: 도서·산간 지역 추가 요금 -->
-                    <div class="sub-info">도서·산간 지역 추가 4,000원 부과</div>
                     <!-- 정보 행: 배송 출발일 -->
                     <div class="info-row">
                         <div class="label">배송 출발일</div>
-                        <div class="value">오늘 오전 9시 전까지 주문 시</div>
+                        <div class="value spaced">지금 주문 시</div>
                     </div>
                     <!-- 배송 날짜 정보 -->
-                    <div class="shipping-date">2024년 5월 27일 (월) 출발</div>
+                    <div class="shipping-date">2024년 6월 4일 (화) 출발</div>
                     <!-- 구분선 -->
                     <hr class="separator">
                 </div>
+                <!-- 옵션 선택 -->
+                <div class="option-select">
+                    <select id="option" onchange="addOption()">
+                        <option value="">옵션 선택</option>
+                        <option value="option1">한라봉&감귤 주스 40포</option>
+                        <option value="option2">한라봉&감귤 주스 60포</option>
+                    </select>
+                </div>
                 <!-- 총 상품 금액 섹션 -->
-                <div class="total-price">
+                <div class="total-price" id="total-price" style="display: none;">
                     <div class="total-label">총 상품 금액</div>
-                    <!-- 수량 조절 -->
-                    <div class="quantity-controls">
-                        <button class="quantity-btn gray-btn">-</button>
-                        <input type="text" value="1" readonly class="quantity-input">
-                        <button class="quantity-btn gray-btn">+</button>
-                    </div>
+                    <!-- 선택된 옵션 목록 -->
+                    <div id="selected-options" class="selected-options-container"></div>
                     <!-- 총 금액 -->
-                    <div class="total-amount">26,000원</div>
+                    <div class="total-amount" id="total-amount">0원</div>
                 </div>
                 <!-- 액션 버튼 -->
                 <div class="actions">
@@ -97,4 +115,3 @@
     </div>
 </body>
 </html>
-<!-- 상단 GNB 폭 값 수정 필요!! -->
