@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
-    <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="style.css">
-    <!-- JavaScript 파일 연결 -->
     <script defer src="script.js"></script>
 </head>
+
 <body>
-    <!-- 헤더 섹션 -->
     <header class="header">
         <div class="logo-nav">
-            <!-- 로고 이미지 -->
-            <img src="logo.png" alt="Logo"> <!-- 로고 이미지 경로 확인 -->
-            <!-- 네비게이션 메뉴 -->
+            <img src="images/logo.png" alt="Logo">
             <nav>
                 <ul>
                     <li><a href="#">우리의 미션</a></li>
@@ -25,70 +22,55 @@
                 </ul>
             </nav>
         </div>
-        <!-- 로그인 버튼 -->
         <button class="login-btn">로그인</button>
     </header>
-    
-    <!-- 메인 컨테이너 -->
+
     <div class="container">
-        <!-- 제품 섹션 -->
         <div class="product">
-            <!-- 제품 이미지 슬라이더 -->
             <div class="product-image-slider">
-                <img src="hanla1.webp" alt="Product Image 1" class="product-image main-image"> <!-- 메인 이미지 경로 확인 -->
+                <img src="images/hanla1.webp" alt="Product Image 1" class="product-image main-image">
                 <div class="thumbnail-container">
-                    <img src="hanla1.webp" alt="Thumbnail Image 1" class="thumbnail active" onclick="changeImage('hanla1.webp')"> <!-- 썸네일 이미지 경로 확인 -->
-                    <img src="hanla2.jpg" alt="Thumbnail Image 2" class="thumbnail" onclick="changeImage('hanla2.jpg')">
-                    <img src="hanla3.webp" alt="Thumbnail Image 3" class="thumbnail" onclick="changeImage('hanla3.webp')">
+                    <img src="images/hanla1.webp" alt="Thumbnail Image 1" class="thumbnail active"
+                        onclick="changeImage('images/hanla1.webp')">
+                    <img src="images/hanla2.jpg" alt="Thumbnail Image 2" class="thumbnail"
+                        onclick="changeImage('images/hanla2.jpg')">
+                    <img src="images/hanla3.webp" alt="Thumbnail Image 3" class="thumbnail"
+                        onclick="changeImage('images/hanla3.webp')">
                 </div>
             </div>
-            <!-- 제품 상세 정보 -->
+
             <div class="product-details">
-                <!-- 평점 -->
                 <div class="rating">
                     ★★★★★
                     <a href="#">248건의 후기 모두 보기 ></a>
                 </div>
-                <!-- 제품 이름 -->
                 <h1>무농약 한라봉&감귤 주스 40포</h1>
-                <!-- 가격 정보 -->
                 <div class="price">
                     <span class="discount">21%</span>
                     <span class="original-price">43,300원</span>
                     <span class="final-price">34,000원</span>
                 </div>
-                <!-- 제품 정보 -->
                 <div class="product-info">
-                    <!-- 구분선 -->
                     <hr class="separator">
-                    <!-- 무농약 배지 -->
                     <div class="badge">무농약</div>
-                    <!-- 정보 행: 재배 환경 -->
                     <div class="info-row">
                         <div class="label">재배 환경</div>
                         <div class="value spaced">화학농약X, 살충제X, 제초제X</div>
                     </div>
-                    <!-- 정보 행: 생산지 -->
                     <div class="info-row">
                         <div class="label">생산지</div>
                         <div class="value spaced">제주</div>
                     </div>
-                    <!-- 정보 행: 배송비 -->
                     <div class="info-row">
                         <div class="label">배송비</div>
                         <div class="value spaced">무료배송</div>
                     </div>
-                    <!-- 정보 행: 배송 출발일 -->
                     <div class="info-row">
                         <div class="label">배송 출발일</div>
-                        <div class="value spaced">지금 주문 시</div>
+                        <div class="value spaced">지금 주문 시 2024년 6월 4일 (화) 출발</div>
                     </div>
-                    <!-- 배송 날짜 정보 -->
-                    <div class="shipping-date">2024년 6월 4일 (화) 출발</div>
-                    <!-- 구분선 -->
                     <hr class="separator">
                 </div>
-                <!-- 옵션 선택 -->
                 <div class="option-select">
                     <select id="option" onchange="addOption()">
                         <option value="">옵션 선택</option>
@@ -96,15 +78,11 @@
                         <option value="option2">한라봉&감귤 주스 60포</option>
                     </select>
                 </div>
-                <!-- 총 상품 금액 섹션 -->
                 <div class="total-price" id="total-price" style="display: none;">
                     <div class="total-label">총 상품 금액</div>
-                    <!-- 선택된 옵션 목록 -->
                     <div id="selected-options" class="selected-options-container"></div>
-                    <!-- 총 금액 -->
                     <div class="total-amount" id="total-amount">0원</div>
                 </div>
-                <!-- 액션 버튼 -->
                 <div class="actions">
                     <button class="cart-btn">장바구니</button>
                     <button class="gift-btn">선물하기</button>
@@ -113,5 +91,185 @@
             </div>
         </div>
     </div>
+
+    <div class="product-summary">
+        <h2>무농약 한라봉&감귤 주스</h2>
+        <h3>요점 정리</h3>
+        <div class="point">
+            <div class="point-number">1</div>
+            <div class="point-content">
+                <strong>오직 무농약 한라봉과 감귤로만 <span role="img" aria-label="smile">😄</span></strong>
+                <p>청정 제주에서 사람과 환경 모두에 이로운 방식으로 자라 친환경 인증을 받은 감귤과 한라봉으로만 만들었어요.</p>
+            </div>
+        </div>
+        <div class="point">
+            <div class="point-number">2</div>
+            <div class="point-content">
+                <strong>제주의 신선함을 그대로 <span role="img" aria-label="truck">🚛</span></strong>
+                <p>매일 신선하게 갓아 제주에서 바로 보내드려요.</p>
+            </div>
+        </div>
+        <div class="shipping-info">
+            <h3>배송 일정</h3>
+            <p>배송 출발 요일: 화, 목</p>
+            <p>안전 배송을 위해 기상 상황에 따라 3~5일 지연 발송될 수 있어요</p>
+            <p>📦 주문 마감 시간 : 월, 수 오후 5시</p>
+            <p>🚚 순차 출고 안내 : 매주 주문이 들어오는 만큼 주스를 만들고 있어, 주문량이 많을 경우 4~5일 정도 배송 지연이 있을 수 있습니다.</p>
+        </div>
+    </div>
+
+    <div class="product-details-section">
+        <div class="tabs">
+            <button class="tab-button active" onclick="showTab('description')">상세 설명</button>
+            <button class="tab-button" onclick="showTab('reviews')">후기 251</button>
+        </div>
+
+        <div class="product-description" id="description">
+            <img src="images/sayun.png" alt="Sayun Image" class="sayun-image">
+            <table class="info-table">
+                <caption>원재료명 및 함량표</caption>
+                <tbody>
+                    <tr>
+                        <td>무농약 감귤</td>
+                        <td>45%</td>
+                    </tr>
+                    <tr>
+                        <td>무농약 한라봉</td>
+                        <td>5%</td>
+                    </tr>
+                    <tr>
+                        <td>유기농 설탕</td>
+                        <td>8%</td>
+                    </tr>
+                    <tr>
+                        <td>비타민 C</td>
+                        <td>0.05%</td>
+                    </tr>
+                    <tr>
+                        <td>구연산</td>
+                        <td>0.05%</td>
+                    </tr>
+                    <tr>
+                        <td>정제수</td>
+                        <td>남은 비율</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="info-table">
+                <caption>영양성분</caption>
+                <tbody>
+                    <tr>
+                        <td>열량</td>
+                        <td>60kcal</td>
+                    </tr>
+                    <tr>
+                        <td>탄수화물</td>
+                        <td>13g(4%)</td>
+                    </tr>
+                    <tr>
+                        <td>당류</td>
+                        <td>9.6g</td>
+                    </tr>
+                    <tr>
+                        <td>단백질</td>
+                        <td>1g미만(0.7%)</td>
+                    </tr>
+                    <tr>
+                        <td>지방</td>
+                        <td>0g(0%)</td>
+                    </tr>
+                    <tr>
+                        <td>포화지방</td>
+                        <td>0g(0%)</td>
+                    </tr>
+                    <tr>
+                        <td>트랜스지방</td>
+                        <td>0g</td>
+                    </tr>
+                    <tr>
+                        <td>콜레스테롤</td>
+                        <td>0g(0%)</td>
+                    </tr>
+                    <tr>
+                        <td>나트륨</td>
+                        <td>0g(0%)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="product-description" id="reviews" style="display: none;">
+            <h2>고객 후기</h2>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>정말 신선하고 맛있어요!</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★☆</div>
+                <p>배송이 조금 늦었지만 제품은 만족합니다.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>친환경 제품이라 믿고 먹을 수 있어요.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>아이들도 정말 좋아해요.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★☆</div>
+                <p>가격이 조금 비싸지만, 가치가 있습니다.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>포장이 깔끔하고 배송이 빠릅니다.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★☆</div>
+                <p>맛이 상큼하고 신선해요.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>다시 구매할 예정입니다.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★☆☆</div>
+                <p>배송이 조금 느렸습니다.</p>
+            </div>
+            <div class="review">
+                <div class="rating">★★★★★</div>
+                <p>전체적으로 만족스러운 제품입니다.</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="toggle-button" onclick="toggleDescription()">상품 설명 펼치기</button>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="contact-info">
+                <h3>어글리어스 고객센터 070.4769.0271</h3>
+                <p>화-목요일: 11:00 ~ 18:00 (점심시간: 12:00 ~ 13:00)</p>
+                <p>월-금요일: 09:00 ~ 18:00 (점심시간: 12:00 ~ 13:00)</p>
+                <p>토-일, 공휴일: 휴무</p>
+            </div>
+            <div class="footer-buttons">
+                <button class="footer-btn">문의하기</button>
+                <button class="footer-btn">자주 묻는 질문</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <img src="images/logo.png" alt="Company Logo" class="footer-logo">
+            <p>
+                상호명: 주식회사 캐비지 | 대표: 최현주 | 사업자등록번호: 572-81-02287 | 소재지: 서울특별시 영등포구 양평로 144, 8층 (양평동5가)
+                <br> 통신판매업 신고번호: 2021-화성동부-0302 | 제품 및 납품 문의: biz@uglyus.co.kr | 농산물 납품 및 긴급구출 제보: farm@uglyus.co.kr
+            </p>
+            <p>
+                <a href="#">서비스 이용약관</a> | <a href="#">개인정보 처리방침</a>
+            </p>
+            <p>Copyright © 2024 주식회사 캐비지 All rights reserved.</p>
+        </div>
+    </footer>
 </body>
+
 </html>
