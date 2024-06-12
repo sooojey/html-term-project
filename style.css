@@ -122,8 +122,17 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
+.rating-image {
+    width: 15px;
+}
+
 .rating a {
     color: #ff5722;
+    text-decoration: none;
+}
+
+.rating b {
+    color: black;
     text-decoration: none;
 }
 
@@ -182,6 +191,7 @@ nav ul li a {
     font-size: 12px;
     display: inline-block;
     margin-bottom: 5px;
+    text-align: center;
 }
 
 /* 정보 행 스타일 */
@@ -523,6 +533,7 @@ nav ul li a {
     border-radius: 5px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 100px;
 }
 
 .toggle-button:hover {
@@ -544,6 +555,7 @@ nav ul li a {
     align-items: center;
     margin-bottom: 20px;
     padding: 0 40px;
+    text-align: left;
 }
 
 .contact-info h3 {
